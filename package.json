@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://JCNoxoia.github.io/portfolio-site",
+  "homepage": "https://jcnoxoia.github.io/portfolio-site",
   "keywords": [],
   "author": "",
   "license": "ISC",

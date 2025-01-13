@@ -1,0 +1,59 @@
+.card-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card {
+    position: relative;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-size: 300% 300%;
+    padding: 10px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.skill-card-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px); /* Adjust for padding */
+    height: calc(100% - 20px); /* Adjust for padding */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image scales proportionally */
+    z-index: 2; /* Keeps the image above the gradient */
+  }
+
+/* Swirling Gradient Animation */
+@keyframes swirl {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.skills-tooltip {
+    /* position: absolute; */
+    /* bottom: 110%;
+    left: 50%; */
+    transform: translateY(-115%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    /* white-space: nowrap; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.skill-card:hover .skills-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }

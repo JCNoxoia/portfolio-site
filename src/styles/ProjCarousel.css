@@ -1,0 +1,78 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-header {
+    text-align: center
+}
+
+.slick-slider {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.slick-prev::before, .slick-next::before {
+    display: none !important;
+}
+
+.slick-list {
+    height: 700px;
+    align-self: center;
+    margin: 0 -100px !important;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-slide div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 100px !important;
+}
+
+.project-card {
+    display: flex !important;
+    flex-direction: column;
+    background: linear-gradient(115deg, #a9f1c1, #82e4e4);
+    border: 4px solid rgb(89, 201, 201);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 600px !important;
+    width: 100% !important;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.project-card a {
+    color: #1797d3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}

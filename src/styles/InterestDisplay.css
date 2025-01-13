@@ -1,0 +1,89 @@
+.interest-display {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* margin-left: 30px; */
+}
+
+.icon-drop-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon-drop-wrapper h2 {
+    margin: 0;
+}
+
+.icon-drop {
+    position: relative;
+    width: 164px;
+    height: 164px;
+    border: 3px solid #2f6b6b;
+    border-radius: 20px;
+    background-color: azure;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.fa-icon-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.icon-drop-icon {
+    position: absolute;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: rgb(0, 0, 0);
+}
+
+.subinterest-carousel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    height: 100%;
+}
+
+.subinterest-carousel-image {
+    flex: 2;
+}
+
+.subinterest-carousel h2 {
+    margin: 10px 0;
+    height: 10%;
+}
+
+.subinterest-carousel-p {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 20px 10px 10px;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.subinterest-carousel-nav {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.subinterest-carousel-nav button {
+    height: 100%;
+    background: none;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 10px;
+}

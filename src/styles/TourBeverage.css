@@ -1,0 +1,128 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1300;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1.5s ease;
+    pointer-events: auto;
+    backdrop-filter: blur(10px);
+    /* -webkit-backdrop-filter: blur(10px); */
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bevBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1400; /* Stays above the overlay */
+}
+
+.img-container.hide {
+    width: 1px;
+    height: 1px;
+}
+
+.img-container img {
+    width: 200px; /* Adjust as needed */
+    margin: 0 162px; /* Adds spacing between coffee and tea images */
+    transition: all 0.5s ease;
+    opacity: 1;
+    overflow: visible;
+}
+
+.img-container img.float {
+    position: fixed !important; /* Moves the selected image to a fixed position */
+    bottom: 20px !important; /* Aligns with the bottom-left corner */
+    left: 20px !important; /* Aligns with the bottom-left corner */
+    width: 100px; /* Shrinks the image */
+    margin: 0;
+    padding: 0;
+    transition: all 2.0s ease; /* Smooth transition for movement and resizing */
+    opacity: 1;
+    z-index: 1300 !important;
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
+}
+
+.img-container img.float:hover {
+    animation: wobble 0.5s ease-in-out;
+    cursor: pointer; /* Optional: Changes cursor to indicate interactivity */
+}
+
+.img-container img.fade-out {
+    opacity: 0; /* Fades out unselected images */
+    transition: opacity 0.1s ease 0.2s;
+}
+
+.img-container img.hide {
+    visibility: hidden;
+    z-index: -1;
+}
+
+.img-container img.float:not(.fade-out) {
+    opacity: 1 !important;
+}
+
+.beverage-choice {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.choice-buttons {
+    margin-top: 450px;
+    display: flex;
+}
+
+.choice-buttons.hidden {
+    visibility: hidden; /* Completely removes buttons visually */
+}
+
+.choice-buttons button{
+    margin: 0 175px;
+    width: 175px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(243, 221, 150);
+}
+
+.choice-buttons button:hover {
+    background-color: rgb(235, 203, 97);
+}
+
+/* .choice-buttons button:active {
+    background-color: rgb(243, 231, 192);
+} */

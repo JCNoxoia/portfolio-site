@@ -34,7 +34,7 @@ const InterestDisplay = ({ selectedInterest }) => {
                         />
                     )}
                 </div>
-                <p className="subinterest-carousel-p" style={{fontWeight: "bold"}}>Select an intrest card for details!</p>
+                <p className="subinterest-carousel-p" style={{fontWeight: "bold"}}>Select an interest card for details!</p>
             </div>
         )
     }
